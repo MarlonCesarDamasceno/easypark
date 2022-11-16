@@ -1,5 +1,6 @@
 ﻿using EasyPark.EasyPark.Domain.Entitys;
 using EasyPark.EasyPark.Domain.Interface.Repositorys;
+using EasyPark.EasyPark.Domain.Interface.Services;
 using EasyPark.EasyPark.Domain.Requests;
 using EasyPark.EasyPark.Domain.Responses;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EasyPark.EasyPark.Core.Services
 {
-    public class UsuariosService
+    public class UsuariosService: IUsuariosService
     {
         private readonly IUsuariosRepository _usuariosRepository;
 
@@ -41,6 +42,32 @@ namespace EasyPark.EasyPark.Core.Services
             }
 
             return statusCadastro;
+        }
+
+        public async Task<UsuariosResponse> PersistirLoginAsyinc(UsuariosRequest usuarioRequest)
+        {
+            try
+            {
+                var verificaDadosLogin = _usuariosRepository.PersisteLogin(new Usuario { Email = usuarioRequest.Email, Senha = usuarioRequest.Senha }).Result;
+
+                if(verificaDadosLogin==null)
+                {
+                    return null;
+                }
+
+                var resultadoLogin = new UsuariosResponse()
+                {
+                    NivelAcesso = verificaDadosLogin.NivelAcesso,
+                    NomeUsuario = verificaDadosLogin.Nome,
+                    UsuarioId = verificaDadosLogin.UsuarioId
+                };
+
+                return resultadoLogin;
+            }
+            catch (Exception EX)
+            {
+                throw new Exception(EX.Message);
+            }
         }
 
 

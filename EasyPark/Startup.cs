@@ -1,6 +1,7 @@
 using EasyPark.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +28,32 @@ namespace EasyPark
             services.AddControllersWithViews();
 
             services.ConfigurarDependencias(Configuration);
+
+            services.AddDistributedMemoryCache();
+            services.AddDistributedMemoryCache();
+            services.AddAuthentication("CookieAuthentication")
+                .AddCookie("CookieAuthentication", propCookie =>
+                {
+                    propCookie.Cookie.Name = "LoginUsuario";
+                    propCookie.LoginPath = "/usuarios/Login";
+                    propCookie.AccessDeniedPath = "/usuarios/AcessoNegado";
+                });
+
+
+
+
+
+            services.AddSession(options =>
+                    {
+                        options.IdleTimeout = TimeSpan.FromMinutes(10);
+                        options.Cookie.HttpOnly = true;
+                        options.Cookie.IsEssential = true;
+                    });
+
+                    services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+                
+                
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +71,8 @@ namespace EasyPark
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseRouting();
 
             app.UseAuthorization();

@@ -231,3 +231,8 @@ C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\n
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\EasyPark.pdb
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\EasyPark.genruntimeconfig.cache
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\NovoUsuario.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\EfetivacaoCadastro.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Login.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\ErroAutenticacao.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutPrestadorServico.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\PrestadorServico\Index.cshtml.g.cs

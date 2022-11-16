@@ -8,6 +8,7 @@ namespace EasyPark.EasyPark.Domain.Interface.Repositorys
 {
     public interface IUsuariosRepository
     {
+        Task<Usuario> PersisteLogin(Usuario usuario);
         void SalvarUsuario(Usuario usuario);
         bool ValidaCadastroExistente(string email);
     }
