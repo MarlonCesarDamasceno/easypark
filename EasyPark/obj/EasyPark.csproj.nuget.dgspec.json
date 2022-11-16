@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\source\\repos\\EasyPark\\EasyPark\\EasyPark.csproj": {}
+    "C:\\Users\\Dell\\Documents\\Projetos\\ProjetoParticular\\easypark\\EasyPark\\EasyPark.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\source\\repos\\EasyPark\\EasyPark\\EasyPark.csproj": {
+    "C:\\Users\\Dell\\Documents\\Projetos\\ProjetoParticular\\easypark\\EasyPark\\EasyPark.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\EasyPark\\EasyPark\\EasyPark.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Documents\\Projetos\\ProjetoParticular\\easypark\\EasyPark\\EasyPark.csproj",
         "projectName": "EasyPark",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\EasyPark\\EasyPark\\EasyPark.csproj",
+        "projectPath": "C:\\Users\\Dell\\Documents\\Projetos\\ProjetoParticular\\easypark\\EasyPark\\EasyPark.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\EasyPark\\EasyPark\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\Documents\\Projetos\\ProjetoParticular\\easypark\\EasyPark\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -66,6 +66,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [

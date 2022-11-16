@@ -1,17 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="EasyPark.Core\Services\" />
-    <Folder Include="EasyPark.Domain\Interface\Repositorys\" />
-    <Folder Include="EasyPark.Domain\Interface\Services\" />
-    <Folder Include="EasyPark.Domain\Responses\" />
-    <Folder Include="EasyPark.Domain\Requests\" />
-    <Folder Include="EasyPark.Persistence\Repositorys\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
@@ -25,6 +16,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
 </Project>
