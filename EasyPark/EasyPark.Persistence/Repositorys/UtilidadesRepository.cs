@@ -1,4 +1,5 @@
 ﻿using EasyPark.EasyPark.Domain.Entitys;
+using EasyPark.EasyPark.Domain.Interface.Repositorys;
 using EasyPark.EasyPark.Persistence.Context;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EasyPark.EasyPark.Persistence.Repositorys
 {
-    public class UtilidadesRepository
+    public class UtilidadesRepository: IUtilidadesRepository
     {
         private EasyParkContext _easyParkContext;
 
