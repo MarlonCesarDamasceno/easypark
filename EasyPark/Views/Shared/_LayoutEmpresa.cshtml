@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EasyPark</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="/js/ControlesExibicao/HabilitaTelas.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md4">
+                    <a href="#MarcoMenu" class="btn btn-secondary" role="button">Ir para o Menu</a>
+                </div>
+                <div class="col-md4">
+                    <a href="#MarcoMain" class="btn btn-secondary" role="button">Ir para o conteúdo</a>
+                </div>
+                <div class="col-md4">
+                    <a href="#MarcoFooter" class="btn btn-default" role="button">Ir para o rodapé</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 style="text-align:center">Easy Park  a sua melhor opção</h1>
+                    <p class="text-justify">Olá @ViewData["NomeUsuarioLogadoEmpresa"], você está logado (A). Seu perfil atual é como Empresa.</p>
+                </div>
+                <div class="col-md-4">
+                    <a asp-controller="Usuarios" asp-action="Sair" role="button" class="btn btn-primary">Sair do sistema</a>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md4">
+                    <span id="MarcoMenu"></span>
+                    <h2>Menu pricipal</h2>
+
+                    <button type="button" class="btn btn-default" id="btnMenu" aria-expanded="false" onclick="HabilitarMenu();">Menu<span class="glyphicon-plus" id="icosExpand" aria-hidden="true"></span></button>                    <span id="MenuPrincipal" style="display:none">
+                        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Empresa" asp-action="Index">Início</a>
+                            </li>
+                            <link class="nav-item" />
+                            <a class="nav-link text-dark" asp-controller="Empresa" asp-action="CadastrarEstacionamento">Cadastrar estacionamento</a>
+                            </li>
+
+                            <link class="nav-item" />
+                            <a class="nav-link text-dark" asp-controller="Empresa" asp-action="GerenciarEstacionamento">Gerenciar estacionamentos cadastrados</a>
+                            </li>
+                        </nav>
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="col-md4">
+                    <p class="text-justify">
+                        Easy Park área restrita apenas para administradores.
+                </div>
+                <div class="col-md4">
+                    <img class="img-fluid" alt="Logo do easy park" src="~/Imagens/Logo.jpg" />
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <span id="MarcoMenu"></span>
+    <div class="container">
+        <span id="MarcoMain"></span>
+        <main role="main" class="pb-3">
+            @RenderBody()
+
+    </div>
+    </main>
+    <hr />
+    <span id="MarcoFotter"></span>
+    <footer class="border-top footer text-muted" aria-label="footer">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <h3>Informações úteis</h3>
+                    <u class="list-inline">
+                        <li><a asp-controller="Home" asp-action="FaleConosco">Fale conosco</a></li>
+                        <li><a asp-controller="Home" asp-action="AcessibilidadeLegal">Acessibilidade legal</a></li>
+                        <li><a asp-controller="Home" asp-action="SobreNos">Sobre nós</a></li>
+                    </u>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Easy Park a todo tempo perto de você</h3>
+                    <p class="text-justify">
+                        AV. Paraná 108, Morumbi São Paulo.
+                        <br />Tel: (11) 5599-9999
+                        <br />
+                    </p>
+
+                    &copy; @DateTime.Now.Year - Easy Park todos os direitos reservados
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

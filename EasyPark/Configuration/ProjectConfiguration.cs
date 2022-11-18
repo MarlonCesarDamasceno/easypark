@@ -24,10 +24,14 @@ namespace EasyPark.Configuration
             //services
             service.AddScoped<IUsuariosService, UsuariosService>();
             service.AddScoped<IPrestadorServicosServices, PrestadorServicosServices>();
+            service.AddScoped<IEstacionamentoService, EstacionamentoServices>();
+
             //repository
             service.AddScoped<IUsuariosRepository, UsuariosRepository>();
             service.AddScoped<IUtilidadesRepository, UtilidadesRepository>();
             service.AddScoped<IPrestadorServicosRepository, PrestadorServicosRepository>();
+            service.AddScoped<IEstacionamentoRepository, EstacionamentoRepository>();
+
             return service;
         }
 

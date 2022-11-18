@@ -241,3 +241,12 @@ C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\n
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\PrestadorServico\GerenciarServico.cshtml.g.cs
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\PrestadorServico\RemoverServico.cshtml.g.cs
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\PrestadorServico\AtualizarServico.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutEmpresa.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\Index.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\CadastrarEstacionamento.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\EstacionamentoCriado.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\GerenciarEstacionamento.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\RemoverEstacionamento.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\AtualizarEstacionamento.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\StatusRemocao.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Empresa\StatusAlteracaoEstacionamento.cshtml.g.cs

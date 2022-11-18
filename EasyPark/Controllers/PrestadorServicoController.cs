@@ -108,5 +108,7 @@ namespace EasyPark.Controllers
             var obtemIdUsuario= HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Hash).Value;
             return int.Parse(obtemIdUsuario);
         }
+
+
     }
 }
