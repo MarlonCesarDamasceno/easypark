@@ -37,7 +37,8 @@
                 <div class="col-md4">
                     <span id="MarcoMenu"></span>
                     <h2>Menu pricipal</h2>
-                    <span id="MenuPrincipal" style="display:none">
+
+                    <button type="button" class="btn btn-default" id="btnMenu" aria-expanded="false" onclick="HabilitarMenu();">Menu<span class="glyphicon-plus" id="icosExpand" aria-hidden="true"></span></button>                    <span id="MenuPrincipal" style="display:none">
                         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="PrestadorServico" asp-action="Index">Início</a>
@@ -47,12 +48,12 @@
                             </li>
 
                             <link class="nav-item" />
-                            <a class="nav-link text-dark" asp-controller="PrestadorServico" asp-action="GerenciarServicos">Gerenciar serviços cadastrados</a>
+                            <a class="nav-link text-dark" asp-controller="PrestadorServico" asp-action="GerenciarServico">Gerenciar serviços cadastrados</a>
                             </li>
                         </nav>
 
                     </span>
-                    <button type="button" class="btn btn-default" id="btnMenu" aria-expanded="false" onclick="HabilitarMenu();">Menu<span class="glyphicon-plus" id="icosExpand" aria-hidden="true"></span></button>
+                    
                 </div>
 
 
