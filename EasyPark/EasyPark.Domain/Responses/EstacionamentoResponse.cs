@@ -21,6 +21,7 @@ namespace EasyPark.EasyPark.Domain.Responses
         public int VagasPreferenciais { get; set; }
         public int VagasComuns { get; set; }
         public int UsuarioEmpresaCriador { get; set; }
+        public string NomeResponsavel { get; set; }
         public List<Estado> estados { get; set; }
         
     }

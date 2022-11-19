@@ -1,0 +1,16 @@
+﻿using EasyPark.EasyPark.Domain.Entitys;
+using EasyPark.EasyPark.Domain.Responses;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace EasyPark.EasyPark.Domain.Interface.Repositorys
+{
+    public interface IClienteRepository
+    {
+        Task<VitrineServicos> BuscarServicosVitrine(string textoBusca);
+        Task<List<Estacionamento>> ObtemListaGeralEstacionamentosAsync(int quantidadeServicos);
+        Task<List<PrestadorServico>> ObtemListaGeralPrestadorServicosAsync(int quantidadePrestadorServicos);
+    }
+}

@@ -98,7 +98,7 @@ public async Task<IActionResult> EfetivaLogin(UsuariosRequest usuariosRequest)
             switch (autenticaUsuario.NivelAcesso)
             {
                 case 1:
-                    return RedirectToAction("index", "Clientes");
+                    return RedirectToAction("index", "Cliente");
                     break;
                 case 2:
                     return RedirectToAction("index", "PrestadorServico");

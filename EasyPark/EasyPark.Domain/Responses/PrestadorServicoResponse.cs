@@ -17,6 +17,7 @@ namespace EasyPark.EasyPark.Domain.Responses
         public string Estado { get; set; }
         public int EstadoId { get; set; }
         public int PrestadorCriador { get; set; }
+        public string NomeResponsavel { get; set; }
 public List<Estado> estados { get; set; }
 
     }

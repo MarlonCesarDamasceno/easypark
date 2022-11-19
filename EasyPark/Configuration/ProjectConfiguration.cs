@@ -22,6 +22,7 @@ namespace EasyPark.Configuration
             service.AddDbContext<EasyParkContext>(options => options.UseSqlServer(RecuperaConnectionString(configuration)));
 
             //services
+            service.AddScoped<IClienteService, ClienteService>();
             service.AddScoped<IUsuariosService, UsuariosService>();
             service.AddScoped<IPrestadorServicosServices, PrestadorServicosServices>();
             service.AddScoped<IEstacionamentoService, EstacionamentoServices>();
@@ -31,7 +32,7 @@ namespace EasyPark.Configuration
             service.AddScoped<IUtilidadesRepository, UtilidadesRepository>();
             service.AddScoped<IPrestadorServicosRepository, PrestadorServicosRepository>();
             service.AddScoped<IEstacionamentoRepository, EstacionamentoRepository>();
-
+            service.AddScoped<IClienteRepository, ClienteRepository>();
             return service;
         }
 
