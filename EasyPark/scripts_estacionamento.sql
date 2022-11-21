@@ -1,6 +1,10 @@
-create database easypark;
 
-use easy park;
+create database easypark;
+go
+
+
+use easypark;
+go
 
 -- 01tb usuarios
 
@@ -8,7 +12,7 @@ create table usuarios (usuarioId int not null primary key identity(1,1),
 nome varchar(50) not null,
 email varchar(100) not null,
 senha varchar(8) not null,
-nivelAcesso int not null);0
+nivelAcesso int not null);
 
 -- 02 tbEstado
 
@@ -48,7 +52,10 @@ constraint fk_UsuarioCriador foreign key (usuarioCriador) references usuarios(us
 -- insert estados
 
 insert into estados(nomeEstado)
-values ('AM'),
+values ('AC'),
+ ('AL'),
+ ('AP'),
+ ('AM'),
    ('BA'),
    ('CE'),
    ('DF'),

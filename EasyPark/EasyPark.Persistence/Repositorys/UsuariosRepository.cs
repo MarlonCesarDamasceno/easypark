@@ -35,7 +35,11 @@ namespace EasyPark.EasyPark.Persistence.Repositorys
 
         public async Task<Usuario> PersisteLogin(Usuario usuario)
         {
+            
+
             var validaLogin = _easyParkContext.Usuarios.Where(x => x.Email == usuario.Email && x.Senha == usuario.Senha).FirstOrDefault();
+            
+
             if(validaLogin!=null)
             {
                 return validaLogin;
