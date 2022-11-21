@@ -20,6 +20,7 @@ namespace EasyPark.Controllers
             _usuariosSservice = usuariosSservice;
         }
 
+
         public IActionResult NovoUsuario()
         {
             return View();
@@ -115,5 +116,9 @@ public async Task<IActionResult> EfetivaLogin(UsuariosRequest usuariosRequest)
             return View();
         }
 
+        public IActionResult Sair()
+        {
+            return RedirectToAction("index", "home");
+        }
     }
 }

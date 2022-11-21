@@ -18,16 +18,14 @@ namespace EasyPark.EasyPark.Persistence.Repositorys
             _easyParkContext = easyParkContext;
         }
 
+        
+
         public void AtualizarServico(PrestadorServico prestadorServico)
         {
-
-            //var servicoAtualizado = _easyParkContext.PrestadorServicos.Where(x => x.PrestadorServicosId == prestadorServico.PrestadorServicosId).FirstOrDefault();
-            //servicoAtualizado = prestadorServico;
-            
             _easyParkContext.Entry(prestadorServico).State = EntityState.Modified;
-            //_easyParkContext.Update(servicoAtualizado);
-            _easyParkContext.SaveChanges();
+                        _easyParkContext.SaveChanges();
         }
+
         public async Task<PrestadorServico> GeraServicoById(int ServicoId)
         {
             return _easyParkContext.PrestadorServicos.Where(x => x.PrestadorServicosId == ServicoId)

@@ -1,36 +1,23 @@
 ﻿@model EasyPark.EasyPark.Domain.Responses.VitrineServicos;
 @{
-    ViewData["Title"] = "Home principal do Cliente";
+    ViewData["Title"] = "Resultado da pesquisa";
     Layout = "~/Views/Shared/_LayoutCliente.cshtml";
 }
+
+
 <div class="row">
     <div class="col-md-12">
-        <h2>Área principal do cliente</h2>
-        <p class="text-justify">
-            Aqui você poderá consultar todos os serviços que a Easy Park oferece para você!
-            <br />
-            Pintou uma urgência aí ou precisa de um bom local para deixar seu veículo, conte com a gente!
-            <br />
-            Temos diverços parceiros por todo território nacional que utilizam nossa ferramenta para divulgar seus serviços bem como estacionamentos por vários pontos com localização facilitada. E claro, sempre perto de você!
-        </p>
-        <p class="text-justify">Se você também quer ser uns de nossos parceiros, saiba que também é possível!</p>
-        <p class="text-justify">
-            Confira os últimos serviços que temos cadastrados no sistema. <strong>Observação, aqui será listados apenas os primeiros serviços!</strong><br />
-            Para conferir mais serviços disponíveis, expande o menu e escolha a opção referente.
-        </p>
-        <br />
-        <h2 class="display-2">ùltimos serviços cadastrados</h2>
-        @if (Model.VitrineEstacionamento.Count() == 0 & Model.VitrinePrestadoresServicos.Count==0)
-                {
-             
-            <p class="text-justify">
-                Ops! ainda não há serviços cadastrados por aqui.<br />
-                Continue sempre consultando pois estamos em constante atualização!
-            </p>
-        }
-
-        @if (Model.VitrinePrestadoresServicos.Count() != 0)
+        @if (Model.BuscaQuantidadeRegistro == 0)
         {
+            <h2>Resultado da sua busca</h2>
+            <p>Não foi localizado nem um resultado para o termo @ViewBag.Pesquisa</p>
+        }
+        else
+        {
+            <h2>Resultado da sua busca</h2>
+
+            <p>Foram localizados @Model.BuscaQuantidadeRegistro registros para o termo pesquisado.</p>
+
 
             @foreach (var servico in Model.VitrinePrestadoresServicos)
             {
@@ -43,11 +30,6 @@
                 <p class="text-justify">Empresa / grupo responsável: @servico.NomeResponsavel.</p>
             }
 
-
-        }
-
-        @if (Model.VitrineEstacionamento.Count() != 0)
-        {
 
             @foreach (var estacionamento in Model.VitrineEstacionamento)
             {
@@ -63,7 +45,19 @@
                 <p class="text-justify">Empresa / grupo responsável: @estacionamento.NomeResponsavel.</p>
             }
 
+
         }
     </div>
+   
 
+
+</div>
+<div class="col-md-12">
+    <div class="row">
+        <p class="text-justify">Esses foram os resultados obtidos através da sua pesquisa.
+        
+        <br /> Caso o resultado não tenha sido o esperado, você poderá retornar e reaplicar o filtro de acordo com os termos da sua pesquisa.
+        </p>
+        <button onclick="history.back(-1)" class="btn btn-primary">Voltar</button>
+    </div>
 </div>

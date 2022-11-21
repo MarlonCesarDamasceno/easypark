@@ -9,5 +9,6 @@ namespace EasyPark.EasyPark.Domain.Responses
     {
         public List<PrestadorServicoResponse> VitrinePrestadoresServicos { get; set; }
         public List<EstacionamentoResponse> VitrineEstacionamento { get; set; }
+        public int BuscaQuantidadeRegistro { get; set; }
     }
 }

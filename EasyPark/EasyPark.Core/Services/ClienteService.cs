@@ -1,5 +1,6 @@
 ﻿using EasyPark.EasyPark.Domain.Interface.Repositorys;
 using EasyPark.EasyPark.Domain.Interface.Services;
+using EasyPark.EasyPark.Domain.Requests;
 using EasyPark.EasyPark.Domain.Responses;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,57 @@ namespace EasyPark.EasyPark.Core.Services
             _clienteRepository = clienteRepository;
         }
 
+        public async Task<VitrineServicos> FiltroBuscaGeral(BuscaRequest buscaRequest)
+        {
+            try
+            {
+                var preparaFiltro = new BuscaRequest();
+                var listPrestadorServico = new List<PrestadorServicoResponse>();
+                var listEstacionamento = new List<EstacionamentoResponse>();
+                var vitrine = new VitrineServicos();
+                preparaFiltro.Estado = buscaRequest.Estado;
+
+                if(buscaRequest.Chaveiro)
+                {
+                    preparaFiltro.Termo = "Chaveiro";
+                    listPrestadorServico = _clienteRepository.FiltroBuscarServicosVitrinePrestadorServico(preparaFiltro).Result;
+                }
+
+                if(buscaRequest.Guincho)
+                {
+                    preparaFiltro.Termo = "Guincho";
+                    listPrestadorServico = _clienteRepository.FiltroBuscarServicosVitrinePrestadorServico(preparaFiltro).Result;
+                }
+
+                if(buscaRequest.LavaRapido)
+                {
+                    preparaFiltro.Termo = "Lava rápido";
+                    listPrestadorServico = _clienteRepository.FiltroBuscarServicosVitrinePrestadorServico(preparaFiltro).Result;
+                }
+
+                if(buscaRequest.Estacionamento)
+                {
+                    listEstacionamento = _clienteRepository.FiltroBuscarServicosVitrineEstacionamento(buscaRequest).Result;
+                }
+
+                if(listEstacionamento!=null)
+                {
+                    vitrine.VitrineEstacionamento = listEstacionamento;
+                }
+
+                if(listPrestadorServico!=null)
+                {
+                    vitrine.VitrinePrestadoresServicos = listPrestadorServico;
+                }
+
+                vitrine.BuscaQuantidadeRegistro = listPrestadorServico.Count() + listEstacionamento.Count();
+                return vitrine;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public async Task<VitrineServicos> ExibirServicosVitrinePrincipalAsync(int totalRegistro)
         {
             try

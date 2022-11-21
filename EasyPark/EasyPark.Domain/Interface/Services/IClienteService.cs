@@ -1,4 +1,5 @@
-﻿using EasyPark.EasyPark.Domain.Responses;
+﻿using EasyPark.EasyPark.Domain.Requests;
+using EasyPark.EasyPark.Domain.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace EasyPark.EasyPark.Domain.Interface.Services
     {
         Task<VitrineServicos> BuscaServicosAsync(string servicoBuscado);
         Task<VitrineServicos> ExibirServicosVitrinePrincipalAsync(int totalRegistro);
+        Task<VitrineServicos> FiltroBuscaGeral(BuscaRequest buscaRequest);
     }
 }

@@ -253,3 +253,6 @@ C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\n
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutCliente.cshtml.g.cs
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\Index.cshtml.g.cs
 C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\Pesquisa.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\FiltroBuscaGeral.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\AplicaFiltro.cshtml.g.cs
+C:\Users\Dell\Documents\Projetos\ProjetoParticular\easypark\EasyPark\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\VerServico.cshtml.g.cs

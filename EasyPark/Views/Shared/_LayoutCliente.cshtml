@@ -45,11 +45,11 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="Index">Início</a>
                             </li>
                             <link class="nav-item" />
-                            <a class="nav-link text-dark" asp-controller="Cliente" asp-action="VerServicos">Ver todos os estacionamentos e prestadores de serviços cadastrados</a>
+                            <a class="nav-link text-dark" asp-controller="Cliente" asp-action="VerServico">Ver todos os estacionamentos e prestadores de serviços cadastrados</a>
                             </li>
 
                             <link class="nav-item" />
-                            <a class="nav-link text-dark" asp-controller="Cliente" asp-action="FiltroBusca">Filtro refinado de busca de serviços em geral</a>
+                            <a class="nav-link text-dark" asp-controller="Cliente" asp-action="FiltroBuscaGeral">Filtro refinado de busca de serviços em geral</a>
                             </li>
                         </nav>
 
@@ -73,7 +73,7 @@
                 <div class="col-md-6">
                     <form asp-action="Pesquisa" asp-controller="Cliente" method="get" onsubmit="return;true">
                         <label for="Busca" id="LblBusca" class="control-label">Busque por serviços ou  estacionamentos</label>
-                        <input type="text" id="Busca" name="Busca" class="form-control" placeholder="Pesquise por estacionamentos, chaveiros, guinchos..." />
+                        <input type="text" id="Busca" name="Busca" class="form-control" placeholder="Pesquise por estacionamentos, chaveiros, guinchos..." value="@ViewBag.Pesquisa" />
                         <input type="submit" class="btn btn-lg" value="Pesquisar" />
                     </form>
                     
